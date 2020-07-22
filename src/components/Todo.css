@@ -1,0 +1,32 @@
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.todo {
+  display: flex;
+  cursor: pointer;
+}
+
+.todo .content {
+    flex-grow: 2;
+}
+
+.done {
+  opacity: .7;
+}
+
+.done:hover {
+  opacity: 1;
+}
+
+.todo .icon:hover {
+  animation: blinker 1.5s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes blinker {
+  30% {
+    opacity: 0;
+  }
+}
