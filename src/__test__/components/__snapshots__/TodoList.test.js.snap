@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoList /> component renders correctly empty 1`] = `
+<div>
+  <div
+    class="ui segments"
+  >
+    <div
+      class="ui segment"
+    >
+      There are no more tasks
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TodoList /> component renders correctly with todos 1`] = `
+<div>
+  <div
+    class="ui segments"
+  >
+    <div
+      class="ui segment"
+    >
+      There are no more tasks
+    </div>
+  </div>
+</div>
+`;

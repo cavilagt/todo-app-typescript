@@ -4,7 +4,7 @@ import { TodoType, TodoStatus } from "../types/State";
 import "./Todo.css";
 import AppContext from "../context/AppContext";
 
-type ComponentProps =  TodoType;
+export type ComponentProps =  TodoType;
 
 const Todo:React.FunctionComponent< ComponentProps > = ({ title, status, uid, description }) => {
 
@@ -19,14 +19,21 @@ const Todo:React.FunctionComponent< ComponentProps > = ({ title, status, uid, de
   const statusClass = completed? 'teal inverted todo done': 'todo';
 
   return (
-    <div className={`ui segment ${ statusClass }`} onDoubleClick={ onDobleClickTodo }>
+    <div data-testid={uid} className={`ui segment ${ statusClass }`} onDoubleClick={ onDobleClickTodo }>
       <div className="content">
         <label className="ui header" >{title}</label>
         <p>{description}</p>
       </div>
       <div className="actions">
-        <i className={`circle ${completed? 'check': ''} icon big`} onClick={ onToggleTodo }></i>
-        <i className="close icon big" onClick={ onClickDelete }></i>
+        <span data-tooltip={completed?"Mark as incompleted":"Mark as completed"}>
+          <i className={`circle ${completed? "check ": ""}icon big`}onClick={ onToggleTodo }></i>
+        </span>
+        <span data-tooltip="Details">
+          <i className="info circle icon big" onClick={ onDobleClickTodo }></i>
+        </span>
+        <span data-tooltip="Delete">
+          <i className="times circle icon big" onClick={ onClickDelete }></i>
+        </span>
       </div>
     </div>
   );

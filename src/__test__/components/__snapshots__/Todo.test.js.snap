@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Todo /> component renders correctly, completed task 1`] = `
+<div
+  class="ui segment teal inverted todo done"
+  data-testid="1234"
+>
+  <div
+    class="content"
+  >
+    <label
+      class="ui header"
+    >
+      Title todo test
+    </label>
+    <p>
+      A description, just for testing
+    </p>
+  </div>
+  <div
+    class="actions"
+  >
+    <span
+      data-tooltip="Mark as incompleted"
+    >
+      <i
+        class="circle check icon big"
+      />
+    </span>
+    <span
+      data-tooltip="Details"
+    >
+      <i
+        class="info circle icon big"
+      />
+    </span>
+    <span
+      data-tooltip="Delete"
+    >
+      <i
+        class="times circle icon big"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<Todo /> component renders correctly, completed task 2`] = `
+<div
+  class="ui segment todo"
+  data-testid="4567"
+>
+  <div
+    class="content"
+  >
+    <label
+      class="ui header"
+    >
+      Incompleted task
+    </label>
+    <p>
+      A description, just for testing
+    </p>
+  </div>
+  <div
+    class="actions"
+  >
+    <span
+      data-tooltip="Mark as completed"
+    >
+      <i
+        class="circle icon big"
+      />
+    </span>
+    <span
+      data-tooltip="Details"
+    >
+      <i
+        class="info circle icon big"
+      />
+    </span>
+    <span
+      data-tooltip="Delete"
+    >
+      <i
+        class="times circle icon big"
+      />
+    </span>
+  </div>
+</div>
+`;

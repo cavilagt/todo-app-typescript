@@ -1,14 +1,19 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import Todo from "./Todo";
-import AppContext from "../context/AppContext";
+import { TodoType } from "../types/State";
 
-const TodoList:React.FunctionComponent = () => {
-  const { state } = useContext(AppContext);
+type TodoListProps = {
+  todos?: TodoType[];
+}
+
+const TodoList:React.FunctionComponent<TodoListProps> = ({todos =[] }) => {
   return (
     <div className="ui segments">
       {
-        state?.pageTodoFilter.map(todo => (
+        todos.length === 0
+        ? <div className="ui segment">There are no more tasks</div>
+        : todos.map( todo => (
           <Todo key={todo.uid} {...todo} />))
       }
   </div>

@@ -1,6 +1,5 @@
 import React, { useReducer, useState, useContext } from "react";
 import rootReducer from "../reducers";
-import TodoList from "./TodoList";
 import DetailTodo from "./DetailTodo";
 
 import { Router, Switch, Route } from 'react-router-dom';
@@ -9,6 +8,7 @@ import { TodoActionType } from "../types/actions/TodoAction";
 import { FilterActionType } from "../types/actions/FilterAction";
 import Header from "./Header";
 import { AddTodo } from "../containers/AddTodo";
+import { Todos } from "../containers/Todos";
 
 const App = () => {
   const appContext = useContext(AppContext);
@@ -50,7 +50,7 @@ const App = () => {
       <Router history={ history }>
         <Header />
         <Switch>
-          <Route path="/" exact component={ TodoList } />
+          <Route path="/" exact component={ Todos } />
           <Route path="/todo" exact component={ DetailTodo } />
           <Route path="/new" exact component={ AddTodo } />
         </Switch>

@@ -9,7 +9,9 @@ const Header = () => {
         <Filter />
       </div>
       <div className="item">
-        <Link to="/new" className="ui button primary">Add</Link>
+        <div>
+          <Link to="/new" className="ui button primary">Add</Link>
+        </div>
       </div>
     </div>
   );

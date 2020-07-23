@@ -13,7 +13,7 @@ const defaultValue:TodoType = {
 const detailsReducer = (state: State, action: AppActions) => {
   switch (action.type) {
     case TodoActionType.VIEW_DETAILS:
-      const todo = state.pageTodoFilter.find((todo) => (todo.uid = action.uid));
+      const todo = state.pageTodoFilter.find((todo) => (todo.uid === action.uid));
 
       return todo? {...todo}: {...defaultValue};
     default:
