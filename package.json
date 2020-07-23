@@ -2,14 +2,6 @@
   "name": "todo-app",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-hook-form": "^6.0.8",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "uid": "^1.0.0"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -32,6 +24,14 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hook-form": "^6.0.8",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "uid": "^1.0.0"
+  },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.1",
     "@testing-library/react": "^10.4.7",
@@ -42,6 +42,8 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-router-dom": "^5.1.5",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "react-test-renderer": "^16.13.1",
     "typescript": "~3.7.2"
   }
