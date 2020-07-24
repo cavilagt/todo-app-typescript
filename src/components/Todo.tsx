@@ -12,14 +12,14 @@ const Todo:React.FunctionComponent< ComponentProps > = ({ title, status, uid, de
 
   const onClickDelete = () => handlerDeleteTodo && handlerDeleteTodo( uid );
   const onToggleTodo = () => handlerToggleTodo && handlerToggleTodo( uid );
-  const onDobleClickTodo = () => handlerViewDetails && handlerViewDetails( uid );
+  const viewTodoDetails = () => handlerViewDetails && handlerViewDetails( uid );
 
   const completed = status === TodoStatus.COMPLETED;
 
   const statusClass = completed? 'teal inverted todo done': 'todo';
 
   return (
-    <div data-testid={uid} className={`ui segment ${ statusClass }`} onDoubleClick={ onDobleClickTodo }>
+    <div data-testid={uid} className={`ui segment ${ statusClass }`} onDoubleClick={ viewTodoDetails }>
       <div className="content">
         <label className="ui header" >{title}</label>
         <p>{description}</p>
@@ -29,7 +29,7 @@ const Todo:React.FunctionComponent< ComponentProps > = ({ title, status, uid, de
           <i className={`circle ${completed? "check ": ""}icon big`}onClick={ onToggleTodo }></i>
         </span>
         <span data-tooltip="Details">
-          <i className="info circle icon big" onClick={ onDobleClickTodo }></i>
+          <i className="info circle icon big" onClick={ viewTodoDetails }></i>
         </span>
         <span data-tooltip="Delete">
           <i className="times circle icon big" onClick={ onClickDelete }></i>

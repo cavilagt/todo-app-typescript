@@ -13,7 +13,7 @@ export const Filter:React.FunctionComponent = () => {
     <div className="ui buttons">
       <button className="ui button" onClick={()=>onFilterClick(FilterActionType.SHOW_ALL)}>All</button>
       <button className="ui button" onClick={()=>onFilterClick(FilterActionType.SHOW_COMPLETED)}>Completed</button>
-      <button className="ui button" onClick={()=>onFilterClick(FilterActionType.SHOW_INCOMPLETED)}>No completed</button>
+      <button className="ui button" onClick={()=>onFilterClick(FilterActionType.SHOW_INCOMPLETED)}>Incompleted</button>
     </div>
   );
 };

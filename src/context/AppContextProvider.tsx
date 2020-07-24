@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import rootReducer from "../reducers";
 import AppContext, { history, initialState } from "./AppContext";
 import { FilterActionType } from "../types/actions/FilterAction";
@@ -6,7 +6,7 @@ import { TodoActionType } from "../types/actions/TodoAction";
 
 
 const AppContextProvider:React.FunctionComponent = ({ children }) => {
-    const [state, dispatch] = React.useReducer( rootReducer, initialState );
+    const [state, dispatch] = useReducer( rootReducer, initialState );
     const [ filter, setFilter ] = useState(FilterActionType.SHOW_INCOMPLETED);
   
     const handlerDeleteTodo = ( uid:string ) =>{
