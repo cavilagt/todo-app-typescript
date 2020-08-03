@@ -26,13 +26,13 @@ const Todo:React.FunctionComponent< ComponentProps > = ({ title, status, uid, de
       </div>
       <div className="actions">
         <span data-tooltip={completed?"Mark as incomplete":"Mark as complete"}>
-          <i className={`circle ${completed? "check ": ""}icon big`}onClick={ onToggleTodo }></i>
+          <i className={`circle ${completed? "check ": ""}icon big`} onClick={ onToggleTodo }></i>
         </span>
         <span data-tooltip="Details">
           <i className="info circle icon big" onClick={ viewTodoDetails }></i>
         </span>
         <span data-tooltip="Delete">
-          <i className="times circle icon big" onClick={ onClickDelete }></i>
+          <i className="trash circle icon big" onClick={ onClickDelete }></i>
         </span>
       </div>
     </div>
