@@ -8,14 +8,13 @@ type ComponentProps = {};
 const DetailTodo: React.FunctionComponent<ComponentProps> = () => {
 
   const { state } = useContext(AppContext);
-  const formTitle = 'Form title';
   const todo:TodoType = state && state.todo? state.todo
     : {uid:'', title : "Title is not available",
       description : "Description is not available", status:TodoStatus.INCOMPLETED};
 
   return (
     <div>
-      <h2>{formTitle}</h2>
+      <h2>Task details</h2>
       <div className="ui segment">
         <div className="content">
           <label className="ui header">{todo.title}</label>
