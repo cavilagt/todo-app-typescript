@@ -1,7 +1,6 @@
 import React from "react";
-import { createBrowserHistory } from 'history';
 
-import { State, TodoStatus } from "../types/State";
+import { NewTodo, State, TodoStatus } from "../types/State";
 import { FilterActionType } from "../types/actions/FilterAction";
 import { AppActions } from "../types/actions";
 
@@ -15,9 +14,6 @@ export const initialState: State = { todoList:[
   pageTodoFilter:[],
 };
 
-export const history = createBrowserHistory();
-
-
 export type AppContextType = {
   state:State;
   dispatch: ( action:AppActions ) => void;
@@ -25,7 +21,7 @@ export type AppContextType = {
   handlerToggleTodo: ( uid:string ) => void;
   handlerDeleteTodo: ( uid:string ) => void;
   handlerFilterChange: ( filter:FilterActionType ) => void;
-  addTodo: ( data:any ) => void;
+  addTodo: ( data:NewTodo ) => void;
 }
 
 export default React.createContext<Partial<AppContextType>>({});

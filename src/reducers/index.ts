@@ -8,7 +8,7 @@ const rootReducer = (state: State, action: AppActions):State => {
   return {
     pageTodoFilter: pageTodoFilterReducer(state , action),
     todoList: todosReducer(state.todoList, action),
-    todo: detailsReducer( state, action )
+    todo: detailsReducer(state, action)
   };
 };
 

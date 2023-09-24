@@ -10,6 +10,11 @@ export type TodoType = {
   status: TodoStatus,
 }
 
+export type NewTodo = {
+  title: string,
+  description: string,
+}
+
 export type State = {
   todoList: TodoType[],
   pageTodoFilter: TodoType[],

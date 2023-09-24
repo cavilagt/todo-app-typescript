@@ -3,14 +3,12 @@ import { TodoType, TodoStatus } from "../types/State";
 import { Link } from "react-router-dom";
 import AppContext from "../context/AppContext";
 
-type ComponentProps = {
-  formTitle: string;
-};
+type ComponentProps = {};
 
-const DetailTodo: React.FunctionComponent<ComponentProps> = ({ formTitle }) => {
+const DetailTodo: React.FunctionComponent<ComponentProps> = () => {
 
   const { state } = useContext(AppContext);
-
+  const formTitle = 'Form title';
   const todo:TodoType = state && state.todo? state.todo
     : {uid:'', title : "Title is not available",
       description : "Description is not available", status:TodoStatus.INCOMPLETED};

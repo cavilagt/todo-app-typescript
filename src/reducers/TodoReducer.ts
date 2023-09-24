@@ -1,4 +1,4 @@
-import uid from 'uid';
+import { uid } from 'uid';
 
 import { TodoStatus, TodoType } from "../types/State";
 import { TodoActionType} from "../types/actions/TodoAction";

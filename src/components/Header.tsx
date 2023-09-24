@@ -1,6 +1,7 @@
 import React from "react";
 import { Filter } from "./Filter";
 import { Link } from "react-router-dom";
+import { PAGES } from "./Constants";
 
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
       </div>
       <div className="item">
         <div>
-          <Link to="/new" className="ui button primary">Add</Link>
+          <Link to={PAGES.ADD_NEW} className="ui button primary">Add</Link>
         </div>
       </div>
     </div>
